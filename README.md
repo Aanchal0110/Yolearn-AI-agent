@@ -87,9 +87,10 @@ Add your OpenAI API key and Supabase credentials
 
 Activate workflow
 
- Run Locally
+5️⃣ Run Locally
 n8n start
- Demo (Add Images Later)
+
+📸 Demo (Add Images Later)
 
 React Web Interface
 
