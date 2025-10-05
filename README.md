@@ -1,73 +1,110 @@
-# Welcome to your Lovable project
+Project Title
 
-## Project info
+Study Buddy AI — An Autonomous AI Tutor that helps students with homework, explains concepts, and keeps them motivated.
 
-**URL**: https://lovable.dev/projects/80a87f2b-f4cb-44c6-bf6b-f82e81942f48
+🧠 Overview
 
-## How can I edit this code?
+Study Buddy AI is an intelligent study assistant built using n8n, React, Supabase, and OpenAI.
+It acts as a personal AI tutor, helping students understand complex concepts, solve homework problems, and stay consistent in their studies with motivational nudges.
 
-There are several ways of editing your application.
+🎯 Problem Statement
 
-**Use Lovable**
+Students often face challenges in understanding tough concepts, managing their homework load, and maintaining motivation.
+Most learning tools lack personalization and automation, making self-study ineffective.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/80a87f2b-f4cb-44c6-bf6b-f82e81942f48) and start prompting.
+💡 Proposed Solution
 
-Changes made via Lovable will be committed automatically to this repo.
+Study Buddy AI provides:
 
-**Use your preferred IDE**
+🧩 AI-powered concept explanations and step-by-step homework help
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+⏰ Automated motivational reminders and progress tracking
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🔄 n8n workflows to orchestrate AI logic and data flow
 
-Follow these steps:
+🧠 Data storage, authentication, and analytics through Supabase
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🏗️ System Architecture
+Frontend (React)  <-->  n8n (Workflow Orchestration)  <-->  OpenAI (LLM)
+                                 |
+                            Supabase (Database + Auth)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+Workflow example (n8n):
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+User asks a question on the React app.
 
-**Edit a file directly in GitHub**
+n8n webhook receives and routes the query.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+OpenAI generates a detailed explanation.
 
-**Use GitHub Codespaces**
+Response stored in Supabase and sent back to frontend.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+n8n triggers daily motivational messages.
 
-## What technologies are used for this project?
+⚙️ Tech Stack
+Component	Technology
+Frontend	React.js
+Backend / DB	Supabase
+Workflow Automation	n8n
+AI Engine	OpenAI GPT API
+Hosting (optional)	Vercel / Netlify
+🧩 Key Features
 
-This project is built with:
+💬 AI Chatbot Tutor – Ask doubts, get answers instantly
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📘 Homework Solver – Step-by-step help
 
-## How can I deploy this project?
+🔔 Motivation System – AI-driven reminders via n8n
 
-Simply open [Lovable](https://lovable.dev/projects/80a87f2b-f4cb-44c6-bf6b-f82e81942f48) and click on Share -> Publish.
+📊 Progress Tracker – Stores student activity in Supabase
 
-## Can I connect a custom domain to my Lovable project?
+⚡ Automated Workflows – All orchestration handled by n8n
 
-Yes, you can!
+🧰 Setup Instructions
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/study-buddy-ai.git
+cd study-buddy-ai
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2️⃣ Setup Frontend (React)
+cd frontend
+npm install
+npm start
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+3️⃣ Setup Database (Supabase)
+
+Create a Supabase project
+
+Add tables: users, queries, responses
+
+Add .env file with credentials
+
+4️⃣ Setup n8n Workflow
+
+Import your n8n JSON file (autonomous tutor workflow)
+
+Add your OpenAI API key and Supabase credentials
+
+Activate workflow
+
+ Run Locally
+n8n start
+ Demo (Add Images Later)
+
+React Web Interface
+
+Supabase Dashboard
+
+n8n Workflow Editor
+
+AI Chat Example
+
+🔮 Future Scope
+
+Voice-based AI tutor
+
+Gamified learning experience
+
+Mobile app integration
+
+Advanced analytics dashboard
